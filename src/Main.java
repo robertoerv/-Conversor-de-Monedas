@@ -18,8 +18,15 @@ public class Main {
                     "-7 Salir \n" +
                     "Elija una opcion Valida:\n" +
                     "**********************************************************");
-            opcion =teclado.nextInt();
-            // System.out.println("igresa el valor que deseas converit.");
+            while (true) {
+                if (teclado.hasNextInt()) {
+                    opcion = teclado.nextInt();
+                    break;
+                } else {
+                    System.out.println("Entrada inválida. Por favor, ingresa un número entero.");
+                    teclado.next();
+                }
+            }
 
             if( opcion <= 6 && opcion > 0 ){
                 System.out.println("igresa el valor que deseas converit.");
